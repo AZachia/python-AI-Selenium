@@ -185,6 +185,7 @@ class EChat(ChatBot):
         super().__init__("https://echatgpt.org/chat", *args, **kwargs)
         self.name = 'eChat'
         time.sleep(1)
+        self.driver.find_element(By.XPATH, "/html/body/div[4]/div[2]/div[1]/div[2]/div[2]/button[1]").click()
 
     def ask(self, prompt: str = 'Who are you ?'):
 
@@ -232,7 +233,7 @@ class MyGPT(ChatBot):
 
 if __name__ == '__main__':
 
-    chat = FreeGPT()
+    chat = EChat()
 
     command = input(">")
     while command not in ("q", "quit", "exit"):
