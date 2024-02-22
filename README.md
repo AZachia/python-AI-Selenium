@@ -20,7 +20,7 @@ The code provides different AI models from different websites.
 
 The AI that work the best is FreeGPT.
 
-You can import any ai model you want by importing it:
+You can use any ai model you want by importing it:
 
 ```python
 from python_ai import FreeGPT
