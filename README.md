@@ -35,7 +35,7 @@ You can choose among this models:
  - `CodeAi` (deprecated)
  - `ChatAi` (deprecated)
  - `LLMA` (deprecated)
- - __`FreeGPT`(recommended)__
+ - **`FreeGPT`(recommended)**
  - `EChat`
  - `MyGPT`
 
