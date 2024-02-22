@@ -12,7 +12,16 @@ from selenium.webdriver.chrome.service import Service as ChromeService
 
 class ChatBot:
     def __init__(self, url: str, view: bool = False, debug: bool = True, incognito:bool=True, executable_path: str ="chromedriver.exe", lang=""):
+        """The default classe for the chatbots
 
+        Args:
+            url (str): the url of the website to scrape
+            view (bool, optional): start a visible instance of the browser. Defaults to False.
+            debug (bool, optional): prints log messages. Defaults to True.
+            incognito (bool, optional): start the browser in incognito mode. Defaults to True.
+            executable_path (str, optional): the executable path of the ChromDriver. Defaults to "chromedriver.exe".
+            lang (str, optional): experimental. Defaults to "".
+        """
         self.view = view
         self.debug = debug
         self.name = 'Chatbot Class'
