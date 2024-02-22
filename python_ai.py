@@ -264,12 +264,11 @@ class MyGPT(ChatBot):
 
 
 if __name__ == '__main__':
-    # a = FreeGPT(view=False)
-    a = EChat(view=False)
+    chat = FreeGPT(view=False)
 
 
-    b = input(">")
-    while b not in ("q", "quit", "exit"):
-        print(a.ask(b))
-        b = input(">")
-    print("Merci, au revoir")
+    command = input(">")
+    while bcommand not in ("q", "quit", "exit"):
+        print(chat.ask(b))
+        command = input(">")
+    print("Bye")
