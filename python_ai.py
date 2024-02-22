@@ -268,7 +268,8 @@ if __name__ == '__main__':
 
 
     command = input(">")
-    while bcommand not in ("q", "quit", "exit"):
+    while command not in ("q", "quit", "exit"):
         print(chat.ask(b))
         command = input(">")
     print("Bye")
+    chat.close()
