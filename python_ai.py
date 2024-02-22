@@ -7,7 +7,6 @@ import time
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 import re
-from googletrans import Translator
 from selenium.webdriver.chrome.service import Service as ChromeService
 
 
@@ -121,7 +120,6 @@ class LLMA(ChatBot):
     def __init__(self, *args, **kwargs):
         super().__init__("https://huggingface-projects-llama-2-7b-chat.hf.space/?__theme=dark", *args, **kwargs)
         self.name = 'LLMA'
-        self.lang = 'fr'
         time.sleep(1)
 
     def undo(self):
@@ -137,17 +135,14 @@ class LLMA(ChatBot):
             time.sleep(4)
             res = len(self.driver.find_elements(
                 By.XPATH, '//div[@data-testid="bot"]')[-1].text)
-        return Translator().translate(self.driver.find_elements(By.XPATH, '//div[@data-testid="bot"]')[-1].text, dest=self.lang).text
+        return self.driver.find_elements(By.XPATH, '//div[@data-testid="bot"]')[-1].text
 
     def get_respnces(self):
-        return [Translator().translate(i.text, est=self.lang).text for i in self.driver.find_elements(By.XPATH, '//div[@data-testid="bot"]')]
+        return [i.text for i in self.driver.find_elements(By.XPATH, '//div[@data-testid="bot"]')]
 
     def ask(self, prompt: str = 'Who are you ?'):
 
-        try:
-            prompt = Translator().translate(text=self.role+prompt, dest="en").text
-        except:
-            pass
+        prompt = self.role+prompt
         # print(prompt)
         self.driver.find_element(
             By.XPATH, '//*[@id="component-11"]/label/textarea').send_keys(prompt)
@@ -170,11 +165,6 @@ class LLMA(ChatBot):
 
         res = res = self.driver.find_elements(
             By.XPATH, '//*[@id="component-8"]/div[2]/div[2]/div/div[2]/div')[-1].text
-
-        try:
-            res = Translator().translate(res, dest=self.lang).text
-        except:
-            pass
 
         return res
 
