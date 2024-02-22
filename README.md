@@ -3,6 +3,8 @@ A collection of free AI tools to use with python
 
 Works using [Selenium](https://www.selenium.dev/)
 
+![screenshot](image.PNG)
+
 
 ## Dependencies
 
