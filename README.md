@@ -45,3 +45,7 @@ def __init__(self, view=False, debug: bool = True, incognito=True, executable_pa
 - `debug`: bool: if the app print infos
 - `incognito`: bool: if the browser has to start in incognito mode
 -  `executable_path`: str: the path of the ChromeDriver
+
+## Contribute
+
+Feel free to contribute by adding your own model and make a pull request.
