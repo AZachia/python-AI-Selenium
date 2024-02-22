@@ -264,7 +264,7 @@ class MyGPT(ChatBot):
 
 
 if __name__ == '__main__':
-    chat = FreeGPT(view=False)
+    chat = FreeGPT()
 
 
     command = input(">")
