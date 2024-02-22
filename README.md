@@ -23,9 +23,9 @@ The AI that work the best is FreeGPT.
 You can use any ai model you want by importing it:
 
 ```python
-from python_ai import FreeGPT
+from python_ai import EChat
 
-chat = FreeGPT()
+chat = EChat()
 print(chat.ask("Hello how are you ?"))
 chat.close()
 ```
