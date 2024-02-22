@@ -35,9 +35,9 @@ You can choose among this models:
  - `CodeAi` (deprecated)
  - `ChatAi` (deprecated)
  - `LLMA` (deprecated)
- - **`FreeGPT`(recommended)**
- - `EChat`
- - `MyGPT`
+ - `FreeGPT`(deprecated)
+ - **`EChat`(recommended)**
+ - `MyGPT`(deprecated)
 
 you can pass this arguments to the model:
 ```python
