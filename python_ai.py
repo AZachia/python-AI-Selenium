@@ -232,7 +232,7 @@ if __name__ == '__main__':
 
     command = input(">")
     while command not in ("q", "quit", "exit"):
-        print(chat.ask(b))
+        print(chat.ask(command))
         command = input(">")
     print("Bye")
     chat.close()
