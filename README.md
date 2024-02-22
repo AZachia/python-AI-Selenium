@@ -41,7 +41,7 @@ You can choose among this models:
 
 you can pass this arguments to the model:
 ```python
-def __init__(self, view=False, debug: bool = True, incognito=True, executable_path="chromedriver.exe")
+def __init__(self, view: bool = False, debug: bool = True, incognito: bool = True, executable_path: str = "chromedriver.exe")
 ```
 - `view`: bool: if you want to see the browser
 - `debug`: bool: if the app print infos
