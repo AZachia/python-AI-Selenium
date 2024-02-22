@@ -11,7 +11,8 @@ from selenium.webdriver.chrome.service import Service as ChromeService
 
 
 class ChatBot:
-    def __init__(self, url, view=False, debug: bool = True, incognito=True, executable_path="chromedriver.exe", lang=""):
+    def __init__(self, url: str, view: bool = False, debug: bool = True, incognito:bool=True, executable_path: str ="chromedriver.exe", lang=""):
+
         self.view = view
         self.debug = debug
         self.name = 'Chatbot Class'
@@ -23,7 +24,6 @@ class ChatBot:
         chrome_options = Options()
         if not self.view:
             print("headless")
-            # chrome_options.add_argument("--headless")  # Activer le mode headless
             chrome_options.add_argument("--headless=new")
         else:
             chrome_options.add_experimental_option("detach", True)
