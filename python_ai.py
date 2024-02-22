@@ -11,7 +11,7 @@ from selenium.webdriver.chrome.service import Service as ChromeService
 
 
 class ChatBot:
-    def __init__(self, url: str, view: bool = False, debug: bool = True, incognito:bool=True, executable_path: str ="chromedriver.exe", lang=""):
+    def __init__(self, url: str, view: bool = False, debug: bool = True, incognito:bool=True, executable_path: str = None, lang=""):
         """The default classe for the chatbots
 
         Args:
@@ -38,10 +38,14 @@ class ChatBot:
             chrome_options.add_experimental_option("detach", True)
         if incognito:
             chrome_options.add_argument('--incognito')
+        if executable_path:
+            service = ChromeService(executable_path=executable_path)
+        else:
+            service = None
         chrome_options.add_argument("--disable-gpu")
         chrome_options.add_argument("--start-maximized")
 
-        self.driver = webdriver.Chrome(options=chrome_options, service=ChromeService(executable_path=executable_path))
+        self.driver = webdriver.Chrome(options=chrome_options, service=service)
         self.driver.get(url)
 
     def promptify(self, prompt):
