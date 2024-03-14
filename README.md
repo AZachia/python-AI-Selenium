@@ -6,13 +6,21 @@ Works using [Selenium](https://www.selenium.dev/)
 ![screenshot](image.PNG)
 
 
-## 🛠️ Dependencies
+# 🛠️ Dependencies
 
 This project needs Selenium for the browser control, the Google Chrome Browser, and the [Chromedriver](https://chromedriver.chromium.org/downloads) for your Chrome version.
 
 To install Selenium, run `pip install selenium` in the terminal.
 
-## 📄 Documentation
+# 🎯 Goals
+
+This project aims to be a free and open source alternative to the large language model APIs such as the OpenAi API.
+Pros:
+ - Free and open source
+ - no need to have a powerfull machine, juste a simple computer which can run a webbrowser
+ - no credit or limit
+
+# 📄 Documentation
 
 Download the `python_ai.py` file and ensure that Selenium is installed and the driver for chrome is in the same folder or in the `PATH`.
 
@@ -48,6 +56,6 @@ def __init__(self, view: bool = False, debug: bool = True, incognito: bool = Tru
 - `incognito`: bool: if the browser has to start in incognito mode
 -  `executable_path`: str: the path of the ChromeDriver
 
-## 🤝 Contribute
+# 🤝 Contribute
 
 Feel free to contribute by adding your own model and make a pull request.
